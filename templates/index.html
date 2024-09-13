@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gym Website Template</title>
+	<title>Fitness Elite</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="static/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
@@ -112,9 +112,11 @@
 <section class="classes" id="classes">
 	<div class="container">
 		 <div class="content">
+			{% for i in ClassData %}
 		 	  <div class="box img wow slideInLeft">
-		 	  	 <img src="static/images/class2.png" alt="classes" />
+		 	  	 <img src="{{i.img.url}}" alt="classes" />
 		 	  </div>
+			{% endfor %}  
 		 	  <div class="box text wow slideInRight">
 		 	  	 <h2>Our Classes</h2>
 		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>

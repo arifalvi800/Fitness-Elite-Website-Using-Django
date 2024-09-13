@@ -4,6 +4,7 @@ from django.contrib import messages
 from about.models import About
 from service.models import Service
 from service.models import Service_type
+from our_class.models import Class
 # Create your views here.
 def index(request):
     if request.method=='POST':
@@ -18,10 +19,12 @@ def index(request):
     AboutData=About.objects.all()
     ServiceData=Service.objects.all()
     ServiceType=Service_type.objects.all()
+    ClassData=Class.objects.all()
     data={
         'AboutData':AboutData,
         'ServiceData':ServiceData,
         'ServiceType':ServiceType,
+        'ClassData':ClassData,
     }    
     return render(request,'index.html',data)
 def message(request):
