@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'gallery.apps.GalleryConfig',
     'our_class.apps.OurClassConfig',
     'service.apps.ServiceConfig',
     'about.apps.AboutConfig',

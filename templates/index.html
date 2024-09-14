@@ -233,20 +233,16 @@
 <!-- Start Gallery -->
   <section class="gallery" id="gallery">
   	 <h2>Workout Gallery</h2>
+	 {% for i in GalleryData %}
   	<div class="content">
   		 <div class="box wow slideInLeft">
-  		 	 <img src="static/images/gallery1.jpg" alt="gallery" />
+  		 	 <img src="{{i.gallery_img_1.url}}" alt="gallery" />
   		 </div>
   		 <div class="box wow slideInRight">
-  		 	 <img src="static/images/gallery2.jpg" alt="gallery" />
-  		 </div>
-  		 <div class="box wow slideInLeft">
-  		 	 <img src="static/images/gallery3.jpg" alt="gallery" />
-  		 </div>
-  		 <div class="box wow slideInRight">
-  		 	 <img src="static/images/gallery4.jpg" alt="gallery" />
-  		 </div>
+  		 	 <img src="{{i.gallery_img_2.url}}" alt="gallery" />
+  		 </div>	 
   	</div>
+	{% endfor %}
   </section>
 <!-- End Gallery -->
 

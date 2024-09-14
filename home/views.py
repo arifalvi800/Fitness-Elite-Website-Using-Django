@@ -5,6 +5,7 @@ from about.models import About
 from service.models import Service
 from service.models import Service_type
 from our_class.models import Class
+from gallery.models import Gallery
 # Create your views here.
 def index(request):
     if request.method=='POST':
@@ -20,11 +21,13 @@ def index(request):
     ServiceData=Service.objects.all()
     ServiceType=Service_type.objects.all()
     ClassData=Class.objects.all()
+    GalleryData=Gallery.objects.all()
     data={
         'AboutData':AboutData,
         'ServiceData':ServiceData,
         'ServiceType':ServiceType,
         'ClassData':ClassData,
+        'GalleryData':GalleryData,
     }    
     return render(request,'index.html',data)
 def message(request):
