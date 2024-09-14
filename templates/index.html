@@ -77,8 +77,6 @@
   	  </div>
   </section>
  <!-- End About -->
-
-
  <!-- Start Service -->
  <section class="service" id="service">
  	<div class="container">
@@ -169,48 +167,27 @@
   	 	  	   	   <p>
 					A gym's class schedule offers a variety of sessions, typically including strength training, cardio, yoga, HIIT, flexibility, and functional training. Classes are often scheduled throughout the day, catering to early morning, midday, and evening time slots. This allows members to choose sessions that fit their fitness goals and availability.
   	 	  	   	   </p>
-  	 	  	   	   <img src="static/images/schedule1.png" alt="schedule" />
   	 	  	   </div>
   	 	  	   <div class="box timing wow slideInRight">
                    <table class="table">
+					<thead>
+						<tr>
+							<td class="day">Day</td>
+							<td><strong>Timing</strong></td>
+							<td>Duration</td>
+							<td>Room No.</td>
+						</tr>
+					</thead>
+					{% for i in TableData %}
                    	 <tbody>
                    	 	<tr>
-                   	 		<td class="day">Monday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Tuesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Wednesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Thursday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Friday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Saturday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td class="day">{{i.day}}</td>
+                   	 		<td><strong>{{i.timing}}</strong></td>
+                   	 		<td>{{i.duration}}</td>
+                   	 		<td>{{i.room_no}}</td>
                    	 	</tr>
                    	 </tbody>
+					 {% endfor %}
                    </table>
   	 	  	   </div>
   	 	  </div>

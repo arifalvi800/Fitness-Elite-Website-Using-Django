@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'time_table.apps.TimeTableConfig',
     'training.apps.TrainingConfig',
     'package.apps.PackageConfig',
     'gallery.apps.GalleryConfig',
