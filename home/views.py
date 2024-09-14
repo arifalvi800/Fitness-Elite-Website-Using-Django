@@ -8,6 +8,7 @@ from our_class.models import Class
 from gallery.models import Gallery
 from package.models import Package
 from our_class.models import Class_Type
+from training.models import Training
 # Create your views here.
 def index(request):
     if request.method=='POST':
@@ -26,6 +27,7 @@ def index(request):
     GalleryData=Gallery.objects.all()
     PackageData=Package.objects.all()
     ClassTypeData=Class_Type.objects.all()
+    TrainingData=Training.objects.all()
     data={
         'AboutData':AboutData,
         'ServiceData':ServiceData,
@@ -34,6 +36,7 @@ def index(request):
         'GalleryData':GalleryData,
         'PackageData':PackageData,
         'ClassTypeData':ClassTypeData,
+        'TrainingData':TrainingData
     }    
     return render(request,'index.html',data)
 def message(request):

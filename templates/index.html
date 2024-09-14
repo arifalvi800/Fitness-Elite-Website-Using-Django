@@ -144,17 +144,18 @@
 <!-- Start Today -->
  <section class="start-today">
  	<div class="container">
+		{% for i in TrainingData%}
  		 <div class="content">
  		 	  <div class="box text wow slideInLeft">
- 		 	  	 <h2>Start Your Training Today</h2>
- 		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+ 		 	  	 <h2>{{i.training_heading}}</h2>
+ 		 	  	 <p>{{i.training_des}}</p>
  		 	  	 <a href="" class="btn">Start Now</a>
  		 	  </div>
  		 	  <div class="box img wow slideInRight">
- 		 	  	 <img src="static/images/gallery4.jpg" alt="start today" />
+ 		 	  	 <img src="{{i.training_img.url}}" alt="start today">
  		 	  </div>
-
  		 </div>
+		 {% endfor %}
  	</div>
  </section>
 <!-- End Start Today -->
@@ -166,7 +167,7 @@
   	 	  	   <div class="box text wow slideInLeft">
   	 	  	   	   <h2>Classes Schedule</h2>
   	 	  	   	   <p>
-  	 	  	   	   	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+					A gym's class schedule offers a variety of sessions, typically including strength training, cardio, yoga, HIIT, flexibility, and functional training. Classes are often scheduled throughout the day, catering to early morning, midday, and evening time slots. This allows members to choose sessions that fit their fitness goals and availability.
   	 	  	   	   </p>
   	 	  	   	   <img src="static/images/schedule1.png" alt="schedule" />
   	 	  	   </div>
